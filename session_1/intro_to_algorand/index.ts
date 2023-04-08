@@ -87,10 +87,10 @@ async function main() {
   const assetCreateTxn = algosdk.makeAssetCreateTxnWithSuggestedParamsFromObject({
     suggestedParams,
     from: account.addr, // The account that will create the asset
-    assetName: 'My First Asset', // The name of the asset
-    unitName: 'MFA', // The short name of the asset
-    total: 100, // The total amount of the smallest unit of the asset
-    decimals: 1, // The number of decimals in the asset
+    assetName: 'SHA-Prz', // The name of the asset
+    unitName: 'PRZ', // The short name of the asset
+    total: 1000, // The total amount of the smallest unit of the asset
+    decimals: 2, // The number of decimals in the asset
     reserve: account.addr, // The address of the account that holds the uncirculated/unminted supply of the asset
     freeze: account.addr, // The address of the account that can freeze or unfreeze the asset in a specific account
     defaultFrozen: false, // Whether or not the asset is frozen by default
@@ -122,7 +122,7 @@ async function main() {
     suggestedParams,
     from: account.addr,
     to: newAccount.addr,
-    amount: 25,
+    amount: 200,
     assetIndex,
   });
 
